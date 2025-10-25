@@ -1,0 +1,15 @@
+"use strict";(self.webpackChunkshopify_theme=self.webpackChunkshopify_theme||[]).push([[536],{f2411ffb9237a337b428:(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{
+var swiper__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("a7d4f3350cfba0ab905b"),_core_shopify_init_section__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("aca2cd81cf506d4d0cc6"),_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("b56a16cdaeb8dc9b98d0"),_core_dom_events__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("104cd0cd3a89b0e4c249")
+;(0,_core_shopify_init_section__WEBPACK_IMPORTED_MODULE_1__.initSection)(".js-top-banner",(section=>{const namespace=(0,_core_dom_events__WEBPACK_IMPORTED_MODULE_2__.makeEventNamespace)(),swiperContainer=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".js-top-banner-swiper"),pausedIndex=sessionStorage.getItem("topBannerPausedIndex");if(!swiperContainer)return{unload:()=>{}}
+;const makeVisibleSlidesAccessible=swiper2=>{swiper2.slides.forEach(((element,slide)=>{slide===swiper2.activeIndex?(element.setAttribute("aria-hidden","false"),
+element.setAttribute("tabindex","0")):(element.setAttribute("aria-hidden","true"),element.setAttribute("tabindex","-1"))}))
+},rawRotationSpeed=swiperContainer.getAttribute("data-rotation-speed")||"5000",rotationSpeed=parseInt(rawRotationSpeed),slidesCount=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findElements)(section,".swiper-slide").length,swiper=new swiper__WEBPACK_IMPORTED_MODULE_0__.default(swiperContainer,{modules:[swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay],loop:!0,autoplay:{
+delay:rotationSpeed,disableOnInteraction:!1},on:{afterInit:swiperInstance=>{makeVisibleSlidesAccessible(swiperInstance)},slideChange:swiperInstance=>{makeVisibleSlidesAccessible(swiperInstance)}}});slidesCount<=1&&swiper.autoplay.stop()
+;const toggleSwiperControls=()=>{(0,_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findElements)(section,".js-top-banner-play").forEach((playButton=>{playButton.classList.toggle("u-hide",swiper.autoplay.running)})),(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findElements)(section,".js-top-banner-pause").forEach((pauseButton=>{pauseButton.classList.toggle("u-hide",!swiper.autoplay.running)}))}
+;return null!==pausedIndex&&(swiper.slideToLoop(parseInt(pausedIndex)),swiper.autoplay.stop(),toggleSwiperControls()),namespace.addDelegatedEventListener(section,".js-top-banner-pause","click",(()=>{swiper.autoplay.stop(),
+sessionStorage.setItem("topBannerPausedIndex",swiper.realIndex.toString()),toggleSwiperControls()})),namespace.addDelegatedEventListener(section,".js-top-banner-play","click",(()=>{swiper.autoplay.start(),
+sessionStorage.removeItem("topBannerPausedIndex"),toggleSwiperControls()})),{unload:()=>{swiper.destroy(),namespace.destroy()}}}))}},__webpack_require__=>{
+__webpack_require__.O(0,[791,902,714],(()=>__webpack_require__(__webpack_require__.s="f2411ffb9237a337b428"))),__webpack_require__.O()}]);

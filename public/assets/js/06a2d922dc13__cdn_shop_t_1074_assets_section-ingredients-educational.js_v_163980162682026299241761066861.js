@@ -1,0 +1,9 @@
+"use strict";(self.webpackChunkshopify_theme=self.webpackChunkshopify_theme||[]).push([[475],{"69280d3b10de98e2b7b7":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{
+var _core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("aca2cd81cf506d4d0cc6"),_core_dom_traversal__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("b56a16cdaeb8dc9b98d0"),_core_dom_events__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("104cd0cd3a89b0e4c249")
+;(0,_core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__.initSection)(".js-educational-section",(section=>{const namespace=(0,_core_dom_events__WEBPACK_IMPORTED_MODULE_1__.makeEventNamespace)()
+;return namespace.addDelegatedEventListener(section,".js-ingredients-popup-toggle","click",((_,evt)=>{var _window_dataLayer;evt.preventDefault(),
+null===(_window_dataLayer=window.dataLayer)||void 0===_window_dataLayer||_window_dataLayer.push({event:"key_ingredients_interaction",page_path:document.location.pathname,slide_title:"Full Ingredients List"});const ingredientsContainer=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_2__.findOneElement)(section,".js-ingredients-container");ingredientsContainer&&ingredientsContainer.classList.add("Highlights-ingredients-wrapper__active")})),
+namespace.addDelegatedEventListener(section,".js-ingredients-close","click",((_,evt)=>{evt.preventDefault();const ingredientContainer=(0,_core_dom_traversal__WEBPACK_IMPORTED_MODULE_2__.findOneElement)(section,".js-ingredients-container")
+;null==ingredientContainer||ingredientContainer.classList.remove("Highlights-ingredients-wrapper__active")})),{unload:()=>{namespace.destroy()}}}))}},__webpack_require__=>{
+__webpack_require__.O(0,[902],(()=>__webpack_require__(__webpack_require__.s="69280d3b10de98e2b7b7"))),__webpack_require__.O()}]);

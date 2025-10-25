@@ -1,0 +1,4 @@
+"use strict";(self.webpackChunkshopify_theme=self.webpackChunkshopify_theme||[]).push([[926],{"7007153fa3e35aa1c367":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{
+var _core_dom_events_index_js__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("104cd0cd3a89b0e4c249");(0,__webpack_require__("902890af3e9d44054e88").initSnippet)("drawer-media-carousel",(snippet=>{const namespace=(0,
+_core_dom_events_index_js__WEBPACK_IMPORTED_MODULE_1__.makeEventNamespace)();return()=>{namespace.destroy()}}))}},__webpack_require__=>{__webpack_require__.O(0,[902],(()=>__webpack_require__(__webpack_require__.s="7007153fa3e35aa1c367"))),
+__webpack_require__.O()}]);

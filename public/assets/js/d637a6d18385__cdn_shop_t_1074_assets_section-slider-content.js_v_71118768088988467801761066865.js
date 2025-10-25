@@ -1,0 +1,21 @@
+"use strict";(self.webpackChunkshopify_theme=self.webpackChunkshopify_theme||[]).push([[70],{"3f0a2625c0553457dbc2":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{
+var _core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("aca2cd81cf506d4d0cc6"),superstruct__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("96294add2d9632ee5da8"),swiper__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("a7d4f3350cfba0ab905b"),_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("b56a16cdaeb8dc9b98d0"),_core_dom_events__WEBPACK_IMPORTED_MODULE_4__=__webpack_require__("104cd0cd3a89b0e4c249")
+;(0,superstruct__WEBPACK_IMPORTED_MODULE_2__.type)({swiper:(0,superstruct__WEBPACK_IMPORTED_MODULE_2__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_2__.instance)(swiper__WEBPACK_IMPORTED_MODULE_1__.default))}),(0,
+_core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__.initSection)(".js-selector-content-slider-section",(section=>{const slideshowContainer=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".js-selector-carousel"),slideShowPaginationContainer=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".swiper-pagination"),slideshowContentContainer=(0,_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".js-selector-content-carousel")
+;if(!slideshowContainer||!slideshowContentContainer||!slideShowPaginationContainer)return{unload:null};const namespace=(0,_core_dom_events__WEBPACK_IMPORTED_MODULE_4__.makeEventNamespace)()
+;swiper__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);const swiper=new swiper__WEBPACK_IMPORTED_MODULE_1__.default(slideshowContainer,{loop:!1,slidesPerView:1,speed:1e3,
+modules:[swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination],pagination:{type:"bullets",clickable:!0,bulletActiveClass:"active",el:slideShowPaginationContainer},init:!1,on:{slideChangeTransitionEnd:function(evt){var _window_dataLayer
+;const slideInformation={carouselDirection:evt.swipeDirection,sliderClass:evt.el.classList[0],eventLabel:document.location.pathname}
+;null===(_window_dataLayer=window.dataLayer)||void 0===_window_dataLayer||_window_dataLayer.push(slideInformation,{event:"Slide Navigation"})},slideChange:function(swiperInstance){(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(slideshowContentContainer,".swiper-slide-active")&&swiperInstance.slideTo(swiperInstance.activeIndex)}}
+}),contentSwiper=new swiper__WEBPACK_IMPORTED_MODULE_1__.default(slideshowContentContainer,{loop:!1,slidesPerView:1,speed:1e3,init:!1,allowTouchMove:!1,autoHeight:!0,on:{slideChangeTransitionEnd:function(evt){var _window_dataLayer
+;const slideInformation={carouselDirection:evt.swipeDirection,sliderClass:evt.el.classList[0],eventLabel:document.location.pathname}
+;null===(_window_dataLayer=window.dataLayer)||void 0===_window_dataLayer||_window_dataLayer.push(slideInformation,{event:"Slide Navigation"}),evt.el.querySelectorAll(".swiper-slide").forEach((function(slide){
+if(slide.setAttribute("tabindex","-1"),slide.classList.contains("swiper-slide-active")){slide.setAttribute("tabindex","0");const sliderMessage=document.querySelector("#content-slider-message")
+;null!=sliderMessage&&(sliderMessage.textContent=slide.textContent)}}))},slideChange:function(swiperInstance){swiper.slideTo(swiperInstance.activeIndex)}}});return swiper.init(),contentSwiper.init(),
+namespace.addDelegatedEventListener(section,".js-selector-slider-next","click",(()=>{const nextSlideIndex=contentSwiper.isEnd?"0":`${contentSwiper.activeIndex+1}`;swiper.slideTo(parseInt(nextSlideIndex)),
+contentSwiper.slideTo(parseInt(nextSlideIndex))})),namespace.addDelegatedEventListener(section,".js-selector-slider-navigation","click",(target=>{const targetSlideIndex=parseInt(target.getAttribute("data-slide-index")||"0")
+;targetSlideIndex&&(swiper.slideTo(targetSlideIndex-1),contentSwiper.slideTo(targetSlideIndex-1))})),{unload:()=>{namespace.destroy(),swiper.destroy(),contentSwiper.destroy()}}}))}},__webpack_require__=>{
+__webpack_require__.O(0,[791,502,902,714],(()=>__webpack_require__(__webpack_require__.s="3f0a2625c0553457dbc2"))),__webpack_require__.O()}]);

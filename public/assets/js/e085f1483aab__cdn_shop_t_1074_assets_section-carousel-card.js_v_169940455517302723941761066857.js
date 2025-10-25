@@ -1,0 +1,11 @@
+"use strict";(self.webpackChunkshopify_theme=self.webpackChunkshopify_theme||[]).push([[248],{"466a46bb13cc31e19aa5":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{
+var _core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("aca2cd81cf506d4d0cc6"),superstruct__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("96294add2d9632ee5da8"),_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("b56a16cdaeb8dc9b98d0"),swiper__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("a7d4f3350cfba0ab905b")
+;(0,superstruct__WEBPACK_IMPORTED_MODULE_2__.type)({swiper:(0,superstruct__WEBPACK_IMPORTED_MODULE_2__.optional)((0,superstruct__WEBPACK_IMPORTED_MODULE_2__.instance)(swiper__WEBPACK_IMPORTED_MODULE_1__.default))}),(0,
+_core_shopify_init_section__WEBPACK_IMPORTED_MODULE_0__.initSection)(".js-carousel-card-section",(section=>{const carouselContainer=(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".js-carousel-card-slider-container"),numberOfSlides=(0,_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findElements)(section,".swiper-slide").length
+;if(!carouselContainer)return{unload:()=>{}};const swiper=new swiper__WEBPACK_IMPORTED_MODULE_1__.default(carouselContainer,{loop:!1,centeredSlides:!0,slidesPerView:1.5,speed:1e3,spaceBetween:25,
+modules:[swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation],navigation:{nextEl:(0,_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".swiper-button-next"),prevEl:(0,
+_core_dom_traversal__WEBPACK_IMPORTED_MODULE_3__.findOneElement)(section,".swiper-button-prev")},breakpoints:{1240:{centeredSlides:!1,slidesPerView:numberOfSlides>3?4:3,spaceBetween:40}},on:{slideChangeTransitionEnd:function(evt){
+var _window_dataLayer;const slideInformation={carouselDirection:evt.swipeDirection,sliderClass:evt.el.classList[0],eventLabel:document.location.pathname}
+;null===(_window_dataLayer=window.dataLayer)||void 0===_window_dataLayer||_window_dataLayer.push(slideInformation,{event:"Slide Navigation"})}}});return{unload:()=>{swiper.destroy()}}}))}},__webpack_require__=>{
+__webpack_require__.O(0,[791,502,902,714],(()=>__webpack_require__(__webpack_require__.s="466a46bb13cc31e19aa5"))),__webpack_require__.O()}]);
